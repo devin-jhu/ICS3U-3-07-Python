@@ -1,27 +1,32 @@
 #!/usr/bin/env python3
 
 # Created by Devin Jhu
-# Created on March 2022
-# The number game
+# Created on April 2022
+# The date calculator
 
-import constants
+import random
 
 
 def main():
-    # this function is a guessing game
+    # this function helps gandma
 
-    print("The number game")
-    print("Guess a number between 1 and 9")
+    print("Are you old enough to date my gradchild")
 
     # input
-    NumberGuess = int(input("enter number: "))
+    age_string = input("Enter your age: ")
 
     # process
-    if NumberGuess == constants.NumberAnswer:
-        print("you win!")
-    else:
-        print("you lose :(")
-    print("Done.")
+    try:
+        age_number = int(age_string)
+
+        if age_number >= 25 and age_number <= 40:
+            print("You may date my grandchild")
+        else:
+            print("You may NOT date my grandchild")
+
+    except Exception:
+        print("Not an age")
+    print("\nDone.")
 
 
 if __name__ == "__main__":
